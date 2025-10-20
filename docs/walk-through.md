@@ -1,0 +1,9 @@
+- bash```npx create-react-router@latest```
+- bash```yarn```
+- install UI framework bash```yarn add @mui/material @emotion/react @emotion/styled```
+- Create CRUD APIs with pagination using Golang and connect with Mongo DB
+- Integrate APIs with React Router
+- Create CI/CD pipeline using Github Actions
+- Deploy the application using Docker and Docker Compose
+- Create script for seeding MongoDB with initial data
+- Decide on which UI/UX to use  | Go with table 
