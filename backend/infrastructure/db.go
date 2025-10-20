@@ -57,11 +57,9 @@ func InitialiseDB() *sql.DB {
 						log.Print(res)
 					}
 				} else {
-					res, err := db.Exec("INSERT OR IGNORE INTO dogs (breed, variants) VALUES (?, json_array(?))", breed, strings.Join(variants, ", "))
+					_, err := db.Exec("INSERT OR IGNORE INTO dogs (breed, variants) VALUES (?, json_array(?))", breed, strings.Join(variants, ", "))
 					if err != nil {
 						log.Printf("error inserting into dogs: %v", err)
-					} else {
-						log.Print(res)
 					}
 				}
 
