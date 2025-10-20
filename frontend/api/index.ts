@@ -1,5 +1,4 @@
-const baseUrl = process.env.BACKEND_BASE_URL || "http://localhost:5050/api";
-
+const baseUrl = import.meta.env.BACKEND_BASE_URL || "http://localhost:5050/api";
 interface Dog {
   ID: number;
   Breed: string;
@@ -26,6 +25,7 @@ export async function createDog(breed: string, variants: string): Promise<Dog> {
   return jsonRes.Data.Dog;
 }
 export async function listDogs(): Promise<Dog[]> {
+  console.log("listing dogs")
   let res = await fetch(baseUrl + "/dogs");
 
   const jsonRes = await res.json();
