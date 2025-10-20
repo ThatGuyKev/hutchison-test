@@ -1,4 +1,4 @@
-const baseUrl = import.meta.env.BACKEND_BASE_URL || "http://localhost:5050/api";
+var baseUrl = process.env.BACKEND_BASE_URL || "https://hutchison-test.onrender.com/api";
 interface Dog {
   ID: number;
   Breed: string;

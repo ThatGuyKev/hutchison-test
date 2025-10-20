@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import { Dashboard } from "../components/Dashboard";
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: "Dogs API" },
     { name: "description", content: "Welcome to Dogs API!" },
